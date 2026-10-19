@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GigPilot — paste the message, get the battle plan</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="brand">🎯 GigPilot</div>
+  <div class="open-count"><span id="openCount">0</span> open actions</div>
+</header>
+
+<main>
+  <section id="inputZone" class="input-zone">
+    <h1>Paste a buyer message.<br>Get your battle plan.</h1>
+    <p class="sub">GigPilot reads it for you: what they want, the deadline, the reference, your next step.</p>
+    <textarea id="msgInput" rows="6" placeholder="Paste the buyer message here…"></textarea>
+    <div class="input-actions">
+      <button id="sampleBtn" class="link-btn">Try a sample</button>
+      <button id="analyzeBtn" class="primary big">Analyze ⚡</button>
+    </div>
+    <div id="errorBox" class="error hidden"></div>
+  </section>
+
+  <section id="resultZone" class="hidden">
+    <div id="resultCard"></div>
+    <div class="result-actions">
+      <button id="discardBtn" class="secondary">Discard</button>
+      <button id="saveBtn" class="primary">Save to board</button>
+    </div>
+  </section>
+
+  <section class="board-section">
+    <div class="board-head">
+      <h2>Action board</h2>
+      <button id="newBtn" class="link-btn hidden">+ New analysis</button>
+    </div>
+    <div id="board"></div>
+  </section>
+</main>
+
+<footer>
+  Extraction is AI-powered — always double-check deadlines against the original message.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
